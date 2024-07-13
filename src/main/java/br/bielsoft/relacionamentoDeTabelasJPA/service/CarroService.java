@@ -54,7 +54,6 @@ public class CarroService {
         return carroRepository.save(newCarro);
     }
 
-    @Transactional
     public Carro updateCarro(CarroDTO carroDTO){
         Carro newCarro = carroRepository.findById(carroDTO.id())
                 .orElseThrow(() -> new RuntimeException("ID NAO ENCONTRADO"));
@@ -68,7 +67,6 @@ public class CarroService {
         return carroRepository.save(newCarro);
     }
 
-    @Transactional
     public void deleteCarro(Long id){
         carroRepository.deleteById(id);
     }

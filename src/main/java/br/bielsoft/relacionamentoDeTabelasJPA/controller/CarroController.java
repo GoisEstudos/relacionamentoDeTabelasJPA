@@ -17,7 +17,7 @@ import java.util.List;
 public class CarroController {
 
     @Autowired
-    CarroService service;
+    private final CarroService service;
 
     @GetMapping
     public ResponseEntity<List<Carro>> getCarros(){

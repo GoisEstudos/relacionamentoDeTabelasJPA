@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,6 +19,8 @@ public class Fabricante {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Size(max = 255)
+    @NotBlank
     private String nome;
 
     public Fabricante(FabricanteDTO fabricanteDTO){

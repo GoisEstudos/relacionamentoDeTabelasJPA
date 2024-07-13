@@ -1,5 +1,6 @@
 package br.bielsoft.relacionamentoDeTabelasJPA;
 
+import org.junit.ClassRule;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
@@ -14,5 +15,4 @@ class TestcontainersConfiguration {
 	PostgreSQLContainer<?> postgresContainer() {
 		return new PostgreSQLContainer<>(DockerImageName.parse("postgres:latest"));
 	}
-
 }

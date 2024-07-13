@@ -17,7 +17,7 @@ import java.util.List;
 public class ModeloController {
 
     @Autowired
-    private ModeloService service;
+    private final ModeloService service;
 
     @GetMapping
     public ResponseEntity<List<Modelo>> getModelos(){

@@ -30,7 +30,6 @@ public class FabricanteService {
         return repository.save(newFabricante);
     }
 
-    @Transactional
     public Fabricante updateFabricante(FabricanteDTO fabricanteDTO){
         Fabricante newFabricante = repository.findById(fabricanteDTO.id())
                 .orElseThrow(() -> new RuntimeException());
@@ -39,7 +38,6 @@ public class FabricanteService {
         return repository.save(newFabricante);
     }
 
-    @Transactional
     public void deleteFabricante(Long id){
       repository.deleteById(id);
     }

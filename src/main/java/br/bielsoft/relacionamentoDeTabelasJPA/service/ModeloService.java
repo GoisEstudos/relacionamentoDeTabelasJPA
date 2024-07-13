@@ -40,7 +40,6 @@ public class ModeloService {
         return modeloRepository.save(newModelo);
     }
 
-    @Transactional
     public Modelo updateModelo(ModeloDTO modeloDTO){
         Modelo newModelo = modeloRepository.findById(modeloDTO.id())
                 .orElseThrow(() -> new RuntimeException("ID NAO ENCONTRADO"));
@@ -49,7 +48,6 @@ public class ModeloService {
         return modeloRepository.save(newModelo);
     }
 
-    @Transactional
     public void deleteModelo(Long id){
         modeloRepository.deleteById(id);
     }

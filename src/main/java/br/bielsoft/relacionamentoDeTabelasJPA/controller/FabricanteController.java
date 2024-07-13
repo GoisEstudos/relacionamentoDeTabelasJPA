@@ -17,7 +17,7 @@ import java.util.List;
 public class FabricanteController {
 
     @Autowired
-    private FabricanteService service;
+    private final FabricanteService service;
 
     @GetMapping
     public ResponseEntity<List<Fabricante>> getFabricantes(){
