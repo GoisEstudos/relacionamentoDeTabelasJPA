@@ -15,11 +15,15 @@ public class FabricanteService {
     @Autowired
     private FabricanteRepository repository;
 
+    public FabricanteService(FabricanteRepository repository) {
+        this.repository = repository;
+    }
+
     public List<Fabricante> getFabricantes(){
         return repository.findAll();
     }
 
-    public Fabricante getFabricante(Long id){
+    public Fabricante getFabricanteById(Long id){
         return repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("ID NAO ENCONTRADO"));
     }

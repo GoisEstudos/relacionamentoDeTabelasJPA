@@ -8,8 +8,9 @@ import org.springframework.context.annotation.Import;
 @SpringBootTest
 class RelacionamentoDeTabelasJpaApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+	//PARA FUNCIONAR PRECISA ESTAR RODANDO O DOCKER.
+//	@Test
+//	void contextLoads() {
+//	}
 
 }
